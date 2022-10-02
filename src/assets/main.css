@@ -1,0 +1,220 @@
+@import "./base.css";
+
+body {
+  font-family: Inter;
+}
+
+#app {
+  background: var(--hijau);
+}
+
+#main {
+  width: 95vw;
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 2em;
+}
+.flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ttombol {
+  user-select: none;
+  cursor: pointer;
+  transition: ease-in-out;
+  transition-duration: 300ms;
+}
+.ttombol:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+#search {
+  display: flex;
+}
+#search input {
+  border: none;
+  width: 40vw;
+  height: 2.5vw;
+  border-radius: 6px 0 0 6px;
+}
+#search label {
+  background: var(--hijau-gelap);
+  color: var(--putih);
+  width: 6vw;
+  text-align: center;
+  padding: calc(1 / 8 * 2.5vw) 0;
+  border-radius: 0 6px 6px 0;
+}
+
+table {
+  width: 70vw;
+  text-align: center;
+  color: var(--putih);
+  border-spacing: 0;
+}
+#bsatu {
+  background: var(--hijau-gelap);
+  color: var(--putih);
+}
+#bsatu td:nth-child(2) {
+  text-align: center;
+  padding: 0;
+}
+tr {
+  background: var(--putih);
+  color: var(--hitam);
+}
+tr:nth-child(2n+1) {
+  background: #ddd;
+}
+table td {
+  width: 12vw;
+  height: 2.8vw;
+  font-weight: bold;
+}
+table td:first-child {
+  width: 6vw;
+}
+table td:nth-child(2) {
+  width: auto;
+}
+
+.sidebar {
+  width: 5vw;
+  height: 100vh;
+  float: left;
+  background: var(--hitam);
+  overflow: hidden;
+  z-index: 10;
+  position: fixed;
+}
+#ciconk {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+.sidebar img {
+  object-fit: contain;
+  height: 1.5vw;
+}
+#ciconk img:first-child {
+  border-radius: 2vw;
+  height: 2.5vw;
+}
+.sidebar .dim {
+  opacity: 0.6;
+}
+.sidebar .aktif {
+  opacity: 1;
+}
+
+.logoatas {
+  object-fit: contain;
+  height: 3vw;
+  position: absolute;
+  left: 3vw;
+  top: 3vh;
+}
+
+input[type=text], input[type=password] {
+  width: 22vw;
+  height: 5vh;
+  border: none;
+  border-radius: 11px;
+  padding-left: 0.7vw;
+}
+
+#submit {
+  width: 10vw;
+  border-radius: 10px;
+  align-self: center;
+  height: 6.5vh;
+  background: var(--hitam);
+  color: var(--putih);
+  margin: 2em 0 1.5em 0;
+  border: none;
+}
+
+a,
+.green {
+  text-decoration: none;
+  transition: 0.4s;
+  color: var(--hitam);
+}
+
+/*custom checkbox add class ccekbox to container and centang to span*/
+.ccekbox, .cradio {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 2em;
+}
+.hilang {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+}
+.centang, .radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 5px;
+  background: var(--putih);
+  transition: 500ms;
+}
+.radio {
+  width: 1.3vw;
+  height: 1.3vw;
+  border-radius: 50%;
+}
+.ccekbox:hover input ~ .centang {
+  filter: brightness(0.9);
+}
+.ccekbox input:checked ~ .centang {
+  background: var(--hijau);
+}
+.centang::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.ccekbox input:checked ~ .centang::after {
+  display: block;
+}
+.ccekbox .centang::after {
+  left: 40%;
+  top: 25%;
+  width: 0.5vw;
+  height: 1vw;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.cradio:hover input ~ .radio {
+  filter: brightness(0.9);
+}
+.cradio input:checked ~ .radio {
+  background: var(--hijau);
+}
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  #app {
+    width: 100vw;
+  }
+}
