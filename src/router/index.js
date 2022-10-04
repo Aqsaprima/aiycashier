@@ -40,6 +40,16 @@ const router = createRouter({
       component: () => import('../views/vkaradmin.vue')
     },
     {
+      path: '/editprofile',
+      name: 'editprofile',
+      component: () => import('../views/editprofile.vue')
+    },
+    {
+      path: '/tambahuser',
+      name: 'tambahuser',
+      component: () => import('../views/tambahuser.vue')
+    },
+    {
       path: '/dashboard',
       name: 'dashboard',
       component: () => import('../views/dashboard.vue')

@@ -89,9 +89,12 @@
   align-items: center;
   font-size: 0.9em;
 }
+table {
+    width: calc( 61vw + 2em);
+}
 table td {
     height: 3.7vw;
-    width: 20vw;
+    width: 15vw;
 }
 table img {
     height: 5vh;
@@ -104,7 +107,8 @@ tr td:nth-child(1) {
     width: 5vw;
 }
 tr td:nth-child(2) {
-  text-align: left;
-  padding-left: 3em;
+    width: 15vw;
+    text-align: left;
+    padding-left: 3.5em;
 }
 </style>

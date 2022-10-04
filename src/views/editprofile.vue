@@ -16,38 +16,61 @@
         </div>
     </div>
         <div id="main">
-            <img id="fotopro" src="blank.png">
+            <div id="cfoto" class="flexcenter">
+                <img id="fotopro" src="blank.png">
+                <div id="caption">
+                    <img src="tulis.png">
+                    <p>Ubah Foto</p>
+                </div>
+            </div>
             <div id="cform">
                 <div id="formkiri" class="kumpulan">
                     <label for="username">Username</label><br>
-                    <input type="text" disabled id="username">
+                    <input type="text" id="username">
                     <label for="nohp">No. Hp</label><br>
-                    <input type="text" disabled id="nohp">
+                    <input type="text" id="nohp">
                     <label for="toko">Toko</label><br>
                     <input type="text" disabled id="toko">
                 </div>
                 <div id="formkanan" class="kumpulan">
                     <label for="nama">Nama</label><br>
-                    <input type="text" disabled id="nama">
+                    <input type="text" id="nama">
                     <label for="alamat">Alamat</label><br>
-                    <input type="text" disabled id="alamat">
+                    <input type="text" id="alamat">
                     <label for="role">Role</label><br>
                     <input type="text" disabled id="role">
                 </div>
             </div>
             <div id="ctom" class="flexcenter">
-                <div id="berhenti" class="tombol">Berhentikan</div>
+                <div id="simpan" class="tombol">Simpan</div>
                 <div id="kembali" class="tombol">Kembali</div>
             </div>
         </div>
 </template>
 
 <style scoped>
+#cfoto {
+    flex-direction: column;
+}
 #fotopro {
-    width: 10vw;
+    width: 7vw;
     object-fit: contain;
     border-radius: 5vw;
     border: 0.25vw #ffffff solid;
+}
+#caption {
+  display: flex;
+  width: 10vw;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+#caption img {
+  height: 1.3vw;
+}
+#caption p {
+  font-size: 0.9em;
+  font-weight: bold;
 }
 #cform {
     display: flex;
@@ -69,7 +92,9 @@ input[type="text"] {
   border-radius: 5px;
   margin: 0.4vw 0 1.5vw 0;
   background: white;
-  filter: brightness(0.9);
+}
+input:disabled {
+    filter: brightness(0.9);
 }
 .tombol {
   width: 30vw;
@@ -87,7 +112,7 @@ input[type="text"] {
     flex-direction: column;
     gap: 1em;
 }
-#berhenti {
+#simpan {
     background: var(--hitam);
 }
 #kembali {

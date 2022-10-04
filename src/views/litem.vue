@@ -6,10 +6,10 @@
     <div class="sidebar">
         <div id="ciconk">
             <img src="blank.png">
-            <img class="dim aktif" src="iconk/iconk.png">
+            <img class="dim" src="iconk/iconk.png">
             <img class="dim" src="iconk/iconk1.png">
             <img class="dim" src="iconk/iconk2.png">
-            <img class="dim" src="iconk/iconk3.png">
+            <img class="dim aktif" src="iconk/iconk3.png">
             <img class="dim" src="iconk/iconk4.png">
             <img src="iconk/iconk5.png">
             <img src="iconk/iconk6.png">
