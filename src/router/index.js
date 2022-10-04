@@ -30,6 +30,16 @@ const router = createRouter({
       component: () => import('../views/kadmin.vue')
     },
     {
+      path: '/litem',
+      name: 'litem',
+      component: () => import('../views/litem.vue')
+    },
+    {
+      path: '/vkaradmin',
+      name: 'vkaradmin',
+      component: () => import('../views/vkaradmin.vue')
+    },
+    {
       path: '/dashboard',
       name: 'dashboard',
       component: () => import('../views/dashboard.vue')
