@@ -50,6 +50,11 @@ const router = createRouter({
       component: () => import('../views/tambahuser.vue')
     },
     {
+      path: '/tambahbarang',
+      name: 'tambahbarang',
+      component: () => import('../views/tambahbarang.vue')
+    },
+    {
       path: '/dashboard',
       name: 'dashboard',
       component: () => import('../views/dashboard.vue')
